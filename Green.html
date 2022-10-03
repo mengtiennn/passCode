@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>相信通行碼</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #333;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 414px;
+        height: 100vh;
+        background: linear-gradient(45deg, #12ad67, #2ec983, #12ad67);
+      }
+
+      .card {
+        position: relative;
+        margin: auto 20px;
+        width: calc(100% - 40px);
+        height: auto;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .card:after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 8.85px;
+        background: #2ec983;
+        border-radius: 100%;
+        right: 0;
+        top: 218px;
+        transform: translate(50%, -50%);
+        box-shadow: inset 5px 0 20px rgb(0, 0, 0, 0.1);
+      }
+
+      .card:before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 8.85px;
+        background: #2ec983;
+        border-radius: 100%;
+        left: 0;
+        top: 218px;
+        transform: translate(-50%, -50%);
+        box-shadow: inset -5px 0 20px rgb(0, 0, 0, 0.1);
+      }
+
+      .staff {
+        margin: 0;
+        padding: 24px;
+        width: 100%;
+        color: #0e771d;
+      }
+
+      .staff ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .staff ul li {
+        list-style-type: none;
+        margin-bottom: 10px;
+      }
+
+      .staff ul li:last-child {
+        margin: 0;
+      }
+
+      .staff label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+      }
+
+      .staff .deta {
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 56px;
+      }
+
+      .staff .deta span {
+        padding-left: 8px;
+      }
+
+      .Covid-19 {
+        padding: 8px 20px 32px 20px;
+        width: 100%;
+        background: rgba(46, 201, 131, 10%);
+      }
+
+      .Covid-19 .colum {
+        display: flex;
+        justify-content: Space-between;
+        width: 100%;
+        padding-top: 8px;
+      }
+
+      .Covid-19 .colum .item {
+        width: 50%;
+        height: auto;
+      }
+
+      .Covid-19 .colum label {
+        display: block;
+        margin-bottom: 4px;
+        line-height: 24px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #585c69;
+      }
+
+      .Covid-19 .colum .deta {
+        line-height: 26px;
+        font-size: 20px;
+        color: #3c3c3c;
+        font-weight: 500;
+      }
+
+      .Covid-19 .colum .deta span {
+        display: inline-block;
+        padding: 0 4px;
+        font-weight: 600;
+      }
+
+      .Covid-19 .colum .dete {
+        line-height: 26px;
+        font-size: 16px;
+        color: #3c3c3c;
+        font-weight: 600;
+      }
+
+      .Covid-19 .stamp {
+        margin: 40px auto 0 auto;
+        display: block;
+        width: 136px;
+        height: 136px;
+        background: linear-gradient(#0ec791, #249f37);
+        color: #fff;
+        border-radius: 100%;
+      }
+
+      .footer {
+        height: 48px;
+        background: #0e771d;
+        padding: 16px;
+        text-align: center;
+        color: white;
+        border-radius: 0 0 10px 10px;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="card">
+        <div class="staff">
+          <ul>
+            <li>
+              <label>持有人</label>
+              <div class="deta">王亞東<span>20681</span></div>
+            </li>
+            <li>
+              <label>有效日期</label>
+              <div class="deta">2022-12-28<span>週五</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Covid-19">
+          <div class="colum">
+            <div class="item">
+              <label>最近上傳快篩</label>
+              <div class="deta">陰性</div>
+              <div class="dete">2022-12-22 14:55</div>
+            </div>
+            <div class="item">
+              <label>最近接種新冠疫苗</label>
+              <div class="deta">第<span>2</span>劑</div>
+              <div class="dete">2022-02-28</div>
+            </div>
+          </div>
+
+          <div class="stamp">
+            <?xml version="1.0" encoding="UTF-8"?><svg
+              id="check"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 136 136"
+            >
+              <defs>
+                <linearGradient
+                  id="greenGradient"
+                  x1="68"
+                  y1="136"
+                  x2="68"
+                  y2="0"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0" stop-color="#249f37" />
+                  <stop offset="1" stop-color="#0ec791" />
+                </linearGradient>
+              </defs>
+              <circle cx="68" cy="68" r="68" fill="url(#greenGradient)" />
+              <path
+                d="M96.22,42.28c-.94,.05-1.82,.47-2.45,1.16-9.51,9.95-28.52,30.51-39.07,41.64l-12.69-11.19h0c-.97-.86-2.32-1.13-3.54-.72-1.23,.41-2.14,1.44-2.4,2.71-.26,1.27,.18,2.57,1.15,3.43l15.34,13.53h0c.7,.62,1.62,.95,2.55,.9,.94-.04,1.82-.45,2.46-1.13,10.09-10.56,31.45-33.78,41.41-44.2h0c.68-.7,1.04-1.64,1.02-2.61-.03-.97-.44-1.89-1.15-2.55-.71-.66-1.66-1.01-2.63-.96h0Z"
+                fill="#fff"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="footer">本日已完成自主健康回報且無風險</div>
+      </div>
+    </main>
+  </body>
+</html>
