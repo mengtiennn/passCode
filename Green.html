@@ -199,7 +199,8 @@
           </div>
 
           <div class="stamp">
-            <?xml version="1.0" encoding="UTF-8"?><svg
+            <div id="animationWindow"></div>
+            <!-- <?xml version="1.0" encoding="UTF-8"?><svg
               id="check"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -223,12 +224,32 @@
                 d="M96.22,42.28c-.94,.05-1.82,.47-2.45,1.16-9.51,9.95-28.52,30.51-39.07,41.64l-12.69-11.19h0c-.97-.86-2.32-1.13-3.54-.72-1.23,.41-2.14,1.44-2.4,2.71-.26,1.27,.18,2.57,1.15,3.43l15.34,13.53h0c.7,.62,1.62,.95,2.55,.9,.94-.04,1.82-.45,2.46-1.13,10.09-10.56,31.45-33.78,41.41-44.2h0c.68-.7,1.04-1.64,1.02-2.61-.03-.97-.44-1.89-1.15-2.55-.71-.66-1.66-1.01-2.63-.96h0Z"
                 fill="#fff"
               />
-            </svg>
+            </svg> -->
           </div>
         </div>
 
         <div class="footer">本日已完成自主健康回報且無風險</div>
       </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+    <script>
+      var select = function(s) {
+        return document.querySelector(s);
+      },
+      selectAll = function(s) {
+        return document.querySelectorAll(s);
+      }, 
+      path = "./",
+      animationWindow = select('#animationWindow'),
+      anim = lottie.loadAnimation({
+      container: animationWindow, 
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      //initialSegment: [0, 1140],
+      path: path + 'icon01new3.json' 
+    });
+
+    </script>
   </body>
 </html>
