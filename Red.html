@@ -24,7 +24,7 @@
         margin: 0 auto;
         width: 100vw;
         height: 100vh;
-        background: linear-gradient(45deg, #12ad67, #2ec983, #12ad67);
+        background: linear-gradient(45deg, #f44132, #f45e51, #f44132);
       }
 
       .card {
@@ -37,37 +37,11 @@
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
       }
 
-      .card:after {
-        position: absolute;
-        content: "";
-        width: 10px;
-        height: 8.85px;
-        background: #2ec983;
-        border-radius: 100%;
-        right: 0;
-        top: 218px;
-        transform: translate(50%, -50%);
-        box-shadow: inset 5px 0 20px rgba(136, 103, 103, 0.05);
-      }
-
-      .card:before {
-        position: absolute;
-        content: "";
-        width: 10px;
-        height: 8.85px;
-        background: #2ec983;
-        border-radius: 100%;
-        left: 0;
-        top: 218px;
-        transform: translate(-50%, -50%);
-        box-shadow: inset -5px 0 20px rgb(0, 0, 0, 0.05);
-      }
-
       .staff {
         margin: 0;
         padding: 24px;
         width: 100%;
-        color: #0e771d;
+        color: #e54522;
       }
 
       .staff ul {
@@ -101,79 +75,37 @@
         padding-left: 8px;
       }
 
-      .Covid-19 {
-        padding: 8px 20px 32px 20px;
-        width: 100%;
-        background: rgba(46, 201, 131, 10%);
-      }
-
-      .Covid-19 .colum {
-        display: flex;
-        justify-content: Space-between;
-        width: 100%;
-        padding-top: 8px;
-      }
-
-      .Covid-19 .colum .item {
-        width: 50%;
-        height: auto;
-      }
-
-      .Covid-19 .colum label {
-        display: block;
-        margin-bottom: 4px;
-        line-height: 24px;
-        font-size: 12px;
-        font-weight: normal;
-        color: #585c69;
-      }
-
-      .Covid-19 .colum .data {
-        line-height: 26px;
-        font-size: 20px;
-        color: #3c3c3c;
-        font-weight: 600;
-      }
-
-      .Covid-19 .colum .data span {
-        display: inline-block;
-        padding: 0 4px;
-        font-weight: 700;
-      }
-
-      .Covid-19 .colum .date {
-        line-height: 26px;
-        font-size: 16px;
-        color: #3c3c3c;
-        font-weight: 600;
-      }
-
-      .Covid-19 .stamp {
-        position: relative;
-        margin: 32px auto 0 auto;
+      .stamp {
+        margin: 8px auto 0 auto;
         display: block;
         width: 180px;
         height: 180px;
-        background: linear-gradient(#0ec791, #249f37);
+        /*background: linear-gradient(135deg, #fb9ca1, #f04453);*/
         color: #fff;
         border-radius: 100%;
       }
 
-      .Covid-19 .stamp #icon {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform: translate3d(0, 0, 0);
-      }
-
       .footer {
         height: 48px;
-        background: #0e771d;
+        background: #804004;
         padding: 16px;
         text-align: center;
         color: white;
         border-radius: 0 0 10px 10px;
         font-size: 12px;
+      }
+
+      .fillInBtn {
+        margin-top: 4px;
+        padding: 16px;
+        border: none;
+        width: 374px;
+        line-height: 24px;
+        background: #fff;
+        border-radius: 8px;
+        color: #e54522;
+        font-size: 16px;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -191,29 +123,16 @@
               <div class="data">2022-12-28<span>週五</span></div>
             </li>
           </ul>
-        </div>
-
-        <div class="Covid-19">
-          <div class="colum">
-            <div class="item">
-              <label>最近上傳快篩</label>
-              <div class="data">陰性</div>
-              <div class="date">2022-12-22 14:55</div>
-            </div>
-            <div class="item">
-              <label>最近接種新冠疫苗</label>
-              <div class="data">第<span>2</span>劑</div>
-              <div class="date">2022-02-28</div>
-            </div>
-          </div>
 
           <div class="stamp">
             <div id="animationWindow"></div>
           </div>
         </div>
 
-        <div class="footer">本日已完成自主健康回報且無風險</div>
+        <div class="footer">請完成本日自主健康回報</div>
       </div>
+
+      <button class="fillInBtn">立即填報問卷</button>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
     <script>
@@ -231,7 +150,7 @@
           loop: true,
           autoplay: true,
           //initialSegment: [0, 1140],
-          path: path + "icon01new3.json",
+          path: path + "icon04new3.json",
         });
     </script>
   </body>
